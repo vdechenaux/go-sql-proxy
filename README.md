@@ -28,7 +28,7 @@ import (
 func main() {
 	proxy.RegisterTracer()
 
-	db, _ := sql.Open("origin:tracer", "data source")
+	db, _ := sql.Open("origin:trace", "data source")
 	db.Exec("CREATE TABLE t1 (id INTEGER PRIMARY KEY)")
 	// STDERR: main.go:14: Exec: CREATE TABLE t1 (id INTEGER PRIMARY KEY); args = [] (0s)
 }
